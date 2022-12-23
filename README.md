@@ -1,2 +1,2 @@
-# sprint-grid-automation-ver.-2
+# sprint-grid-automation-v1
 Web Automation using JavaScript Framework
