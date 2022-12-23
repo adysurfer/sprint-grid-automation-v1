@@ -1,0 +1,50 @@
+<app-date-add></app-date-add>
+<table mat-table [dataSource]="tasks$" class="mat-elevation-z8 table">
+	<ng-container matColumnDef="name">
+		<th mat-header-cell *matHeaderCellDef>Task</th>
+		<td mat-cell *matCellDef="let task">
+			<div (mouseenter)="hoverTask(task)" (mouseleave)="leaveTask()" class="table__task">
+				<button
+					mat-icon-button
+					[class.table__task-remove_hidden]="hoveredTask !== task"
+					class="table__task-remove"
+					(click)="removeTask(task)"
+				>
+					<mat-icon color="warn" matTooltip="remove" matTooltipPosition="before"
+						>close</mat-icon
+					>
+				</button>
+				{{ task.name }}
+			</div>
+		</td>
+	</ng-container>
+
+	<ng-container *ngFor="let date of dates$ | async" [matColumnDef]="date.toString(10)">
+		<th
+			mat-header-cell
+			*matHeaderCellDef
+			(mouseenter)="hoverDate(date)"
+			(mouseleave)="leaveDate()"
+			class="table__date"
+		>
+			{{ date | date }}
+			<button
+				mat-icon-button
+				[class.table__date-remove_hidden]="hoveredDate !== date"
+				class="table__date-remove"
+				(click)="removeDate(date)"
+			>
+				<mat-icon color="warn" matTooltip="remove" matTooltipPosition="above"
+					>close</mat-icon
+				>
+			</button>
+		</th>
+		<td mat-cell *matCellDef="let task">
+			<app-status [task]="task" [date]="date"></app-status>
+		</td>
+	</ng-container>
+
+	<tr mat-header-row *matHeaderRowDef="columns$ | async"></tr>
+	<tr mat-row *matRowDef="let row; columns: columns$ | async"></tr>
+</table>
+<app-task-add></app-task-add>

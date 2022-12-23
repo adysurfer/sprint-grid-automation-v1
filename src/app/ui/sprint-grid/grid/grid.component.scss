@@ -1,0 +1,34 @@
+$icon-horizontal-shift: 64px;
+$icon-width: 43px;
+
+:host {
+	display: inline-flex;
+	flex-direction: column;
+	padding-top: 15vh;
+}
+
+.table {
+	//width: 100%;
+	align-self: flex-start;
+	&__task {
+		margin-left: -$icon-horizontal-shift;
+		display: flex;
+		align-items: center;
+	}
+	&__task-remove {
+		margin-right: $icon-horizontal-shift - $icon-width;
+		display: block;
+		&_hidden {
+			visibility: hidden;
+		}
+	}
+	&__date {
+		padding: 0 24px;
+	}
+	&__date-remove {
+		//margin-left: 8px;
+		&_hidden {
+			visibility: hidden;
+		}
+	}
+}

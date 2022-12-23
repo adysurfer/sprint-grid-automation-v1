@@ -1,0 +1,13 @@
+:host {
+	padding-top: 24px;
+	display: flex;
+}
+
+.task-form {
+	&__open-button {
+		margin-right: 16px;
+	}
+	&__add-button {
+		margin-left: 16px;
+	}
+}

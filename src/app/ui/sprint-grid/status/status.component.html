@@ -1,0 +1,30 @@
+<mat-expansion-panel class="status mat-elevation-z0">
+	<mat-expansion-panel-header>
+		<mat-panel-title>
+			<ng-container></ng-container>
+			<span
+				class="mat-body-strong status"
+				*ngIf="!!(task$ | async).statusMap.get(date); else createMessage"
+			>
+				{{ (task$ | async).statusMap.get(date) }}
+			</span>
+		</mat-panel-title>
+	</mat-expansion-panel-header>
+
+	<form [formGroup]="statusForm">
+		<mat-form-field>
+			<mat-label
+				><ng-container *ngIf="!!(task$ | async).statusMap.get(date); else createMessage"
+					>Change status</ng-container
+				></mat-label
+			>
+			<input type="text" matInput formControlName="statusControl" [matAutocomplete]="auto" />
+		</mat-form-field>
+	</form>
+
+	<mat-autocomplete #auto="matAutocomplete">
+		<mat-option *ngFor="let option of options" [value]="option">{{ option }}</mat-option>
+	</mat-autocomplete>
+</mat-expansion-panel>
+
+<ng-template #createMessage><span class="create-message">Create status</span></ng-template>

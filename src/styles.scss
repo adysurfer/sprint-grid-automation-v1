@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+$app-primary: mat-palette($mat-deep-purple);
+$app-accent: mat-palette($mat-amber);
+$app-light-theme: mat-light-theme($app-primary, $app-accent);
+
+$primary: mat-color(map_get($app-light-theme, primary));
+$accent: mat-color(map_get($app-light-theme, accent));
+$warn: mat-color(map_get($app-light-theme, warn));
+
+$foreground: map_get($app-light-theme, foreground);
+$background: map_get($app-light-theme, background);
+
+$status-bar: map_get($background, status-bar);
+$app-bar: map_get($background, app-bar);
+$background-color: map_get($background, background);
+$disabled-text: map-get($foreground, disabled-text);

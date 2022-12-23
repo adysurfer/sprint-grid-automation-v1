@@ -1,0 +1,12 @@
+@import 'src/styles';
+:host {
+	display: block;
+}
+
+.status {
+	color: $primary;
+}
+
+.create-message {
+	color: $disabled-text;
+}

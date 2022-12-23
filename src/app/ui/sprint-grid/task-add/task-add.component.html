@@ -1,0 +1,29 @@
+<button
+	mat-mini-fab
+	color="primary"
+	aria-label="icon for open/close add form"
+	(click)="toggleForm()"
+	class="task-form__open-button"
+	[matTooltip]="formOpened ? 'Close' : 'Add Task'"
+	matTooltipPosition="before"
+>
+	<mat-icon>{{ formOpened ? 'close' : 'add' }}</mat-icon>
+</button>
+<form [formGroup]="addForm" *ngIf="formOpened" (ngSubmit)="submit()">
+	<mat-form-field appearance="fill">
+		<mat-label>Fill the task title, please</mat-label>
+		<input type="text" matInput formControlName="addControl" />
+		<mat-error *ngIf="addControl?.errors?.required">The title is requined</mat-error>
+		<mat-error *ngIf="addControl?.errors?.notUnique"
+			>The task with such name already exists</mat-error
+		>
+	</mat-form-field>
+	<button
+		mat-button
+		type="submit"
+		class="task-form__add-button"
+		[disabled]="addForm.invalid || addForm.pristine"
+	>
+		Add
+	</button>
+</form>
