@@ -8,7 +8,7 @@ You can't create tasks with the similar names and the similar dates.
 
 ## Node.js
 Make sure You have successfully installed Node.js (we recommend 16.10.0).
-Then install dependencies using `npm install` or `npm install --force` for not updating the dependencies.
+Then install dependencies using `npm install` or `npm install --force` for not updating the existing dependencies.
 
 ## Localisation
 This app is cloned from `master-en` branch, so it has english localisation.

@@ -1,0 +1,53 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Greeting",
+    "line": 1,
+    "id": "greeting",
+    "tags": [],
+    "uri": "e2e/features/sprintgrid.feature",
+    "elements": [
+      {
+        "id": "greeting;say-hello",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Say hello",
+        "tags": [
+          {
+            "name": "@e2e",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "the greeter says hello",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I should have heard \"hello\"",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

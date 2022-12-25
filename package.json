@@ -7,7 +7,10 @@
     "build": "ng build",
     "prettier": "prettier --write \"src/**/*{.ts,.js,.json}\"",
     "lint": "eslint --fix \"src/**/*.{ts,js}\"",
-    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
+    "pretty": "cucumber-js --tags=@e2e e2e -f json:e2e/output/results.json -f ./node_modules/cucumber-pretty",
+    "tests": "cucumber-js --tags=@e2e e2e -f json:e2e/output/results.json",
+    "report:html": "node e2e/config/report.js"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +29,9 @@
     "@ngrx/entity": "^9.2.0",
     "@ngrx/store": "^9.2.0",
     "chai": "^4.3.7",
+    "cucumber": "^6.0.7",
+    "cucumber-html-reporter": "^5.5.0",
+    "cucumber-pretty": "^6.0.1",
     "mocha": "^10.2.0",
     "moment": "^2.26.0",
     "puppeteer": "^19.4.1",
