@@ -8,19 +8,20 @@ Feature: Tasks organization
     @e2e
     Scenario: Create a task row
         When I click on add task plus + button
+		Then The add task input field expands
         When I fill task name as 'Task 1'
         When I click on Add button
         Then I am able to create a new task row with 'Task 1'
         When I clear the text in Add task input field
-        Then I see the placeholder as 'Fill the task title, please'
-        Then I see validation message 'The title is required'
-        Then I see validation message text color 'red'
+        Then I see the placeholder value as 'Fill the task title, please'
+        Then I see validation message for task input field as 'The title is required'
+        Then I see validation message text color as 'red'
         Then I see the Add button is disabled
-        When I input 'Task 1' into the add task input field
+        When I fill task name as 'Task 1'
         Then I see validation message 'The task with such name already exists'
         Then I see the Add button is disabled
         When I click on close 'x' button
-        Then The Add task input field is collapsed
+        Then The add task input field is collapsed
 
     @e2e
     Scenario: Create a Date (column)
