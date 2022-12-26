@@ -1,13 +1,25 @@
-const assert = require('assert')
-const { When, Then } = require('cucumber')
-const  Greeter  = require('../../src/greeter')
+const { Given, When, Then, Before, After } = require('cucumber')
 
-When('the greeter says hello', function () {
-    this.whatIHeard = new Greeter().sayHello()
-
+Before(async function () {
+  return await this.openBrowser()
 })
 
-Then('I should have heard {string}', function (expectedResponse) {
-  assert.equal(this.whatIHeard, expectedResponse)
+After(async function () {
+  return await this.closeBrowser()
+})
+
+//Background
+Given('I open sprint-grid web application page', async function () {
+  return await this.visit()
+})
+
+When('I click on add task plus \+ button', async function () {
+  return await this.expandButton()
+})
+
+When('I fill task name as {string}', async function (taskName) {
+
+  return await this.fillTaskName(taskName)
+
 })
 

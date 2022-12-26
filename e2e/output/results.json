@@ -1,21 +1,22 @@
 [
   {
+    "description": "\tAs a user\n\tI want to be able to create, remove tasks and dates, and change status of tasks.",
     "keyword": "Feature",
-    "name": "Greeting",
+    "name": "Tasks organization",
     "line": 1,
-    "id": "greeting",
+    "id": "tasks-organization",
     "tags": [],
     "uri": "e2e/features/sprintgrid.feature",
     "elements": [
       {
-        "id": "greeting;say-hello",
+        "id": "tasks-organization;create-a-task-row",
         "keyword": "Scenario",
-        "line": 3,
-        "name": "Say hello",
+        "line": 8,
+        "name": "Create a task row",
         "tags": [
           {
             "name": "@e2e",
-            "line": 2
+            "line": 7
           }
         ],
         "type": "scenario",
@@ -23,27 +24,28 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 4,
-            "name": "the greeter says hello",
+            "line": 9,
+            "name": "says hello",
             "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:5"
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:3"
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 5,
-            "name": "I should have heard \"hello\"",
+            "line": 10,
+            "name": "hear 'hello'",
             "match": {
               "location": "e2e/features/step_definitions/sprintGridStepDef.js:10"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "function has 0 arguments, should have 1 (if synchronous or returning a promise) or 2 (if accepting a callback)"
             }
           }
         ]
