@@ -1,6 +1,6 @@
 [
   {
-    "description": "\tAs a user\n\tI want to be able to create, remove tasks and dates, and change status of tasks.",
+    "description": "    As a user\n    I want to be able to create, remove tasks and dates, and change status of tasks.",
     "keyword": "Feature",
     "name": "Tasks organization",
     "line": 1,
@@ -11,41 +11,180 @@
       {
         "id": "tasks-organization;create-a-task-row",
         "keyword": "Scenario",
-        "line": 8,
+        "line": 9,
         "name": "Create a task row",
         "tags": [
           {
             "name": "@e2e",
-            "line": 7
+            "line": 8
           }
         ],
         "type": "scenario",
         "steps": [
           {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "says hello",
+            "keyword": "Before",
+            "hidden": true,
             "match": {
               "location": "e2e/features/step_definitions/sprintGridStepDef.js:3"
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 1396000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open sprint-grid web application page",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 765000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I click on add task plus + button",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 81000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I fill task name as 'Unique Task'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 192000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click on Add button for task input",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:23"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 2000000,
+              "error_message": "ReferenceError: document is not defined\n    at SprintGrid.addTask (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/e2e.js:31:15)\n    at SprintGrid.<anonymous> (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/sprintGridStepDef.js:24:21)"
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 10,
-            "name": "hear 'hello'",
+            "line": 13,
+            "name": "I am able to create a new task row with 'Unique Task'",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I clear the text in Add task input field",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I see the task input placeholder value as 'Fill the task title, please'",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I see validation message for task input field as 'The title is required'",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I see validation message text color for task input field as 'red'",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I see the Add button for adding task is disabled",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I fill task name as 'Unique Task'",
             "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:10"
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:18"
             },
             "result": {
-              "status": "failed",
-              "duration": 1000000,
-              "error_message": "function has 0 arguments, should have 1 (if synchronous or returning a promise) or 2 (if accepting a callback)"
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I see validation message for task input field as 'The task with such name already exists'",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I see the Add button for adding task is disabled",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I click on close button X for task field",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "The add task input field is collapsed",
+            "result": {
+              "status": "undefined"
             }
           }
         ]
