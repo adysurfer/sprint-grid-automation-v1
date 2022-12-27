@@ -6,7 +6,7 @@
     "line": 1,
     "id": "tasks-organization",
     "tags": [],
-    "uri": "e2e/features/sprintgrid.feature",
+    "uri": "e2e\\features\\sprintgrid.feature",
     "elements": [
       {
         "id": "tasks-organization;create-a-task-row",
@@ -25,11 +25,11 @@
             "keyword": "Before",
             "hidden": true,
             "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:3"
+              "location": "e2e\\features\\step_definitions\\sprintGridStepDef.js:3"
             },
             "result": {
               "status": "passed",
-              "duration": 1396000000
+              "duration": 590000000
             }
           },
           {
@@ -38,11 +38,11 @@
             "line": 6,
             "name": "I open sprint-grid web application page",
             "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:10"
+              "location": "e2e\\features\\step_definitions\\sprintGridStepDef.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 765000000
+              "duration": 767000000
             }
           },
           {
@@ -51,11 +51,11 @@
             "line": 10,
             "name": "I click on add task plus + button",
             "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:14"
+              "location": "e2e\\features\\step_definitions\\sprintGridStepDef.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 81000000
+              "duration": 47000000
             }
           },
           {
@@ -64,11 +64,11 @@
             "line": 11,
             "name": "I fill task name as 'Unique Task'",
             "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:18"
+              "location": "e2e\\features\\step_definitions\\sprintGridStepDef.js:18"
             },
             "result": {
               "status": "passed",
-              "duration": 192000000
+              "duration": 75000000
             }
           },
           {
@@ -77,12 +77,11 @@
             "line": 12,
             "name": "I click on Add button for task input",
             "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:23"
+              "location": "e2e\\features\\step_definitions\\sprintGridStepDef.js:23"
             },
             "result": {
-              "status": "failed",
-              "duration": 2000000,
-              "error_message": "ReferenceError: document is not defined\n    at SprintGrid.addTask (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/e2e.js:31:15)\n    at SprintGrid.<anonymous> (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/sprintGridStepDef.js:24:21)"
+              "status": "passed",
+              "duration": 516000000
             }
           },
           {
@@ -145,7 +144,7 @@
             "line": 19,
             "name": "I fill task name as 'Unique Task'",
             "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:18"
+              "location": "e2e\\features\\step_definitions\\sprintGridStepDef.js:18"
             },
             "result": {
               "status": "skipped"

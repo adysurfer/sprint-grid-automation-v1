@@ -28,28 +28,11 @@ class SprintGrid {
   }
 
   async addTask() {
-    const cl =document.getElementsByClassName('.task-form__add-button')[0]
-
-    await cl.click()
-
-
-    //const element = await this.page.$(".task-form__add-button")
-    //await this.page.evaluate(element => element.click(), element)
-
-    //const cl = await this.page.waitForXPath("/html[1]/body[1]/app-root[1]/app-grid[1]/app-task-add[1]/form[1]/button[1]/span[1]")
-    //await cl.click()
-
-    
-    //const cl = await this.page.waitForXPath("//button[contains(@class, 'task-form__add-button')]")  // hit enter
-
-    //await document.getElement(".task-form__add-button").click()
-
-
-
-  
+    //await this.page.$eval("button[type='submit']", form => form.submit())
+    await new Promise(r => setTimeout(r, 500))
+    const element = await this.page.waitForXPath("//button[contains(@class, 'task-form__add-button')]")
+    element.click()
   }
-
-
 }
 
 setWorldConstructor(SprintGrid)
