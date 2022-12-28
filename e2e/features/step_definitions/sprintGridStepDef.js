@@ -120,4 +120,10 @@ Then('The date column input field is collapsed', async function () {
   return await this.verifyDateCollapse()
 })
 
+Then('A cell has no status on it', async function (dataTable) {
+
+  return await this.verifyCellStatus(dataTable)
+
+})
+
 

@@ -6,17 +6,17 @@
     "line": 1,
     "id": "tasks-organization",
     "tags": [],
-    "uri": "e2e/features/sprintgrid.feature",
+    "uri": "e2e\\features\\sprintgrid.feature",
     "elements": [
       {
-        "id": "tasks-organization;create-a-date-(column)",
+        "id": "tasks-organization;assign-statuses",
         "keyword": "Scenario",
-        "line": 26,
-        "name": "Create a Date (column)",
+        "line": 53,
+        "name": "Assign statuses",
         "tags": [
           {
             "name": "@e2e",
-            "line": 25
+            "line": 52
           }
         ],
         "type": "scenario",
@@ -25,11 +25,11 @@
             "keyword": "Before",
             "hidden": true,
             "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:3"
+              "location": "e2e\\features\\step_definitions\\sprintGridStepDef.js:3"
             },
             "result": {
               "status": "passed",
-              "duration": 1948000000
+              "duration": 610000000
             }
           },
           {
@@ -38,141 +38,146 @@
             "line": 6,
             "name": "I open sprint-grid web application page",
             "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:10"
+              "location": "e2e\\features\\step_definitions\\sprintGridStepDef.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 698000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 27,
-            "name": "I click on Add date column + button",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:63"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 100000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 28,
-            "name": "I click on the datepicker icon",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:67"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 89000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 29,
-            "name": "I select the date from datepicker",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:71"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 223000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 30,
-            "name": "I click on Add button for date column",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:75"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 516000000
+              "duration": 752000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 31,
-            "name": "I am able to create a new date column as 'Dec 25, 2030'",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:79"
-            },
+            "line": 54,
+            "name": "A cell has no status on it <status>",
             "result": {
-              "status": "passed",
-              "duration": 520000000
+              "status": "undefined"
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 32,
-            "name": "I clear the date from date input field",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:83"
-            },
+            "line": 55,
+            "name": "I click on a cell",
             "result": {
-              "status": "passed",
-              "duration": 53000000
+              "status": "undefined"
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 33,
-            "name": "I see the date input placeholder value as 'Fill the date, please'",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:87"
-            },
+            "line": 56,
+            "name": "I see an empty input field",
             "result": {
-              "status": "passed",
-              "duration": 4000000
+              "status": "undefined"
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 34,
-            "name": "I see a validation message for date input field as 'Date is required'",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:91"
-            },
+            "line": 57,
+            "name": "The placeholder text for input field is 'Set Status'",
             "result": {
-              "status": "passed",
-              "duration": 507000000
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 58,
+            "name": "I click on an input field",
+            "result": {
+              "status": "undefined"
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 35,
-            "name": "I see validation message text color for date input field as 'rgb(244, 67, 54)'",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:95"
-            },
+            "line": 59,
+            "name": "I see statuses list as 'To Do', 'In Progress', 'In Testing', 'Blocked', 'Done'",
             "result": {
-              "status": "passed",
-              "duration": 7000000
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 60,
+            "name": "I select <status> status",
+            "result": {
+              "status": "undefined"
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 36,
-            "name": "I see the Add button for adding date is disabled",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:99"
-            },
+            "line": 61,
+            "name": "I am able set the <status> status in cell",
             "result": {
-              "status": "passed",
-              "duration": 510000000
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 62,
+            "name": "The table collapse",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 63,
+            "name": "I click on a cell with status as <status>",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 64,
+            "name": "I see input field has value <status>",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 65,
+            "name": "The placeholder text for input field is 'Change status'",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 66,
+            "name": "I click on an input field <status>",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 67,
+            "name": "I see statuses list as 'To Do', 'In Progress', 'In Testing', 'Blocked', 'Done'",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 68,
+            "name": "I enter \"random\" text in the input field",
+            "result": {
+              "status": "undefined"
             }
           },
           {
@@ -181,153 +186,42 @@
                 "rows": [
                   {
                     "cells": [
-                      "incorrect dates format"
+                      "status"
                     ]
                   },
                   {
                     "cells": [
-                      "16-45-2023"
+                      "To Do"
                     ]
                   },
                   {
                     "cells": [
-                      "12/32/2022"
+                      "In Progress"
                     ]
                   },
                   {
                     "cells": [
-                      "13/12/2022"
+                      "In Testing"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Blocked"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Done"
                     ]
                   }
                 ]
               }
             ],
             "keyword": "Then ",
-            "line": 37,
-            "name": "I enter date and verify validation msg for date input field as 'Follow the format dd.mm.yyyy, please'",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:103"
-            },
+            "line": 69,
+            "name": "The status <status> is not changed",
             "result": {
-              "status": "passed",
-              "duration": 1667000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 42,
-            "name": "I enter date as '12/12/2022'",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:107"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 106000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 43,
-            "name": "I click on Add button for date column",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:75"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 508000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 44,
-            "name": "I am able to create a new date column as 'Dec 12, 2022'",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:79"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 505000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 45,
-            "name": "I clear the date from date input field",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:83"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 45000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 46,
-            "name": "I enter date as '12/12/2022'",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:107"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 96000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 47,
-            "name": "I see a validation for date input field as 'This date already exists'",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:111"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 503000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 48,
-            "name": "I see the Add button for adding date is disabled",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:99"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 510000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 49,
-            "name": "I click on close date column button X",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:115"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 43000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 50,
-            "name": "The date column input field is collapsed",
-            "match": {
-              "location": "e2e/features/step_definitions/sprintGridStepDef.js:119"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6000000
+              "status": "undefined"
             }
           }
         ]

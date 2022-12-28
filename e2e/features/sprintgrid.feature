@@ -50,8 +50,8 @@ Feature: Tasks organization
         Then The date column input field is collapsed
 
     @e2e
-    Scenario Outline: Assign statuses
-        Given A cell has no status on it
+    Scenario: Assign statuses
+        Then A cell has no status on it <status>
         When I click on a cell
 		Then I see an empty input field
 		Then The placeholder text for input field is 'Set Status'

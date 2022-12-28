@@ -187,6 +187,11 @@ class SprintGrid {
     expect(await validation.evaluate(el => el.innerText.trim())).to.equal('add')
   }
 
+  async verifyCellStatus(dataTable) {
+    console.log('hiiii')
+    expect(dataTable.rows.length).to.equal('d')
+  }
+
 
 
 
