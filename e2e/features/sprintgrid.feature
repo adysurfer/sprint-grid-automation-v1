@@ -81,14 +81,15 @@ Feature: Tasks organization
     
     @e2c
     Scenario Outline: Remove task row and date (column)
-        Given Table contains a task 'Unique Task' and date 'Mar 03, 2023'
-        When I hover over the 'Unique Task'
-        Then I see remove row button - red cross
-        Then I see remove row button - red cross label as 'remove'
-        When I click on remove row button - red cross
-        Then The task row with name 'Unique Task' is deleted
-        When I hover over the date 'Mar 03, 2023'
-        Then I see remove column button - red cross
-        Then I see remove column button - red cross label as 'remove'
-        When I click on remove column button - red cross
-        Then The date column with date 'Mar 03, 2023' is deleted
+        When I hover over the '<task>' row
+        Then I see remove row button
+        When I click on remove task row button
+        Then The task row with name '<task>' is deleted
+        When I hover over the date column '<date>'
+        Then I see remove column button
+        When I click on remove date column button
+        Then The date column with date '<date>' is deleted
+	
+		Examples:
+			| task    | date        |
+			| Task 1  | Jun 1, 2020 |
