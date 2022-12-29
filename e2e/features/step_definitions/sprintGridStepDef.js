@@ -100,7 +100,7 @@ Then('I see the Add button for adding date is disabled', async function () {
   return await this.verifyDisabledAddDateBtn()
 })
 
-Then('I enter date and verify validation msg for date input field as {string}', async function (msg, dataTable) {
+Then('I enter date and verify validation msg for incorrect date formats as {string}', async function (msg, dataTable) {
   return await this.verifyDateValidationMsg2(msg, dataTable)
 })
 
@@ -120,10 +120,49 @@ Then('The date column input field is collapsed', async function () {
   return await this.verifyDateCollapse()
 })
 
-Then('A cell has no status on it', async function (dataTable) {
+When('I click on an empty cell', async function () {
 
-  return await this.verifyCellStatus(dataTable)
+  return await this.clickEmptyCell()
 
 })
+
+Then('The placeholder text for input field is {string}', async function (str) {
+  return await this.verifyPlaceholderText(str)
+})
+
+When('I click on an input field', async function () {
+  return await this.clickStatus()
+})
+
+Then('I see statuses list as', async function (dataTable) {
+  return await this.verifyStatusesList(dataTable)
+})
+
+When('I select {string} status', async function (str) {
+  return await this.selectStatus(str)
+})
+
+Then('The cell collapse', async function () {
+  return await this.verifyCellCollapse()
+})
+
+Then('Cell has {string} status now', async function (str) {
+  return await this.verifySelectedStatus(str)
+})
+
+When('I click on a cell with status as {string}', async function (str) {
+  return await this.clickFilledCell(str)
+})
+
+When('I enter {string} text in the cell input field', async function (str) {
+  return await this.enterCellInput(str)
+})
+
+Then('The existing status {string} on cell is not changed', async function (str) {
+  return await this.verifyCellRandomStatus(str)
+})
+
+
+
 
 

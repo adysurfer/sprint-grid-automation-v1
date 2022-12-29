@@ -5,7 +5,7 @@ Feature: Tasks organization
     Background:
         Given I open sprint-grid web application page
 
-    @e2c
+    @e2e
     Scenario: Create a task row
         When I click on add task plus + button
         When I fill task name as 'Unique Task'
@@ -22,7 +22,7 @@ Feature: Tasks organization
         When I click on close task button X
         Then The add task input field is collapsed
 
-    @e2c
+    @e2e
     Scenario: Create a Date (column)
         When I click on Add date column + button
 		When I click on the datepicker icon
@@ -34,7 +34,7 @@ Feature: Tasks organization
         Then I see a validation message for date input field as 'Date is required'
         Then I see validation message text color for date input field as 'rgb(244, 67, 54)'
         Then I see the Add button for adding date is disabled
-        Then I enter date and verify validation msg for date input field as 'Follow the format dd.mm.yyyy, please'
+        Then I enter date and verify validation msg for incorrect date formats as 'Follow the format dd.mm.yyyy, please'
 		| incorrect dates format |
 		| 16-45-2023             |
 		| 12/32/2022             |
@@ -50,30 +50,34 @@ Feature: Tasks organization
         Then The date column input field is collapsed
 
     @e2e
-    Scenario: Assign statuses
-        Then A cell has no status on it <status>
-        When I click on a cell
-		Then I see an empty input field
+    Scenario Outline: Assign statuses 
+        When I click on an empty cell
 		Then The placeholder text for input field is 'Set Status'
 		When I click on an input field
-        Then I see statuses list as 'To Do', 'In Progress', 'In Testing', 'Blocked', 'Done'
-        When I select <status> status
-        Then I am able set the <status> status in cell
-        Then The table collapse
-		When I click on a cell with status as <status>
-        Then I see input field has value <status>
-        Then The placeholder text for input field is 'Change status'
-        When I click on an input field <status>
-        Then I see statuses list as 'To Do', 'In Progress', 'In Testing', 'Blocked', 'Done'
-        When I enter "random" text in the input field
-        Then The status <status> is not changed
-
-        |status     |
-        |To Do      |
-        |In Progress|
+        Then I see statuses list as
+		|statuses   |
+ 		|To Do      |
+  		|In Progress|
         |In Testing |
         |Blocked    | 
         |Done       |
+
+        When I select '<status>' status
+		Then The cell collapse
+        Then Cell has '<status>' status now
+		When I click on a cell with status as '<status>'
+        When I enter "randomstatus" text in the cell input field
+        Then The existing status '<status>' on cell is not changed
+		
+		Examples:
+            |status     |
+            |To Do      |
+            |In Progress|
+            |In Testing |
+            |Blocked    | 
+            |Done       |
+
+        
     
     @e2c
     Scenario Outline: Remove task row and date (column)

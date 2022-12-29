@@ -1,6 +1,8 @@
 const { setWorldConstructor } = require('cucumber')
 const { expect } = require('chai')
 const puppeteer = require('puppeteer')
+const { arrayBuffer } = require('stream/consumers')
+const { select } = require('@ngrx/store')
 
 class SprintGrid {
   async openBrowser() {
@@ -187,14 +189,70 @@ class SprintGrid {
     expect(await validation.evaluate(el => el.innerText.trim())).to.equal('add')
   }
 
-  async verifyCellStatus(dataTable) {
-    console.log('hiiii')
-    expect(dataTable.rows.length).to.equal('d')
+  async clickEmptyCell() {
+    await new Promise(r => setTimeout(r, 500))
+    const next = await this.page.waitForSelector(".create-message")
+    await next.click()[0]
   }
 
+  async verifyPlaceholderText(str) {
+    const validation = await this.page.$eval(".create-message", el => el.textContent)
+    expect(validation.trim()).to.equal('Create status')
+  }
 
+  async clickStatus() {
+   const next = await this.page.waitForSelector(".mat-form-field-infix span label")
+   await next.click()
+  }
 
+  async verifyStatusesList(dataTable) {
+    await new Promise(r => setTimeout(r, 500))
+    const arrOptions = await this.page.$$eval(".mat-option-text", (elements) => elements.map(cl => cl.innerText))
+    
+    let myArr = []
+    for(let i =1; i < dataTable.rawTable.length; i++)
+      {
+        let z = dataTable.rawTable[i].toString()
+        myArr.push(z)
+      }
+    expect(arrOptions).to.include.members(myArr)
+  }
 
+  async selectStatus(str) {
+   await this.page.$$eval(".mat-option-text", (elements, _str) => elements.find((el)  => el.innerText === _str).click(), str)
+  }
+
+async verifyCellCollapse() {
+  await new Promise(r => setTimeout(r, 1000))
+  const element = await this.page.$(".mat-expansion-indicator")
+  const rotationvalue = await element.evaluate(el=> el.getAttribute('style'))
+  expect(rotationvalue).to.equal('transform: rotate(0deg);')
+}
+
+async verifySelectedStatus(str) {
+  const element = await this.page.$("mat-panel-title span")
+  const statusExist = await element.evaluate(el=> el.innerText)
+  expect(statusExist).to.equal(str)
+}
+
+async clickFilledCell(str) {
+  const next = await this.page.waitForSelector(".mat-body-strong")
+  await next.click()
+}
+
+async enterCellInput(str) {
+  await new Promise(r => setTimeout(r, 1000))
+  const cellInput = await this.page.waitForSelector('input')
+  await cellInput.click({ clickCount: 3 })
+  await cellInput.type(str)
+}
+
+async verifyCellRandomStatus(str) {
+  await new Promise(r => setTimeout(r, 1000))
+  const element = await this.page.$("mat-panel-title span")
+  const statusExist = await element.evaluate(el=> el.innerText)
+  expect(statusExist).to.equal(str)
+}
 
 }
 

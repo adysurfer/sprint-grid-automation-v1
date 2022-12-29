@@ -8,8 +8,8 @@
     "prettier": "prettier --write \"src/**/*{.ts,.js,.json}\"",
     "lint": "eslint --fix \"src/**/*.{ts,js}\"",
     "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
-    "pretty": "cucumber-js --tags=@e2e e2e -f json:e2e/output/results.json -f ./node_modules/cucumber-pretty",
-    "tests": "cucumber-js --tags=@e2e e2e -f json:e2e/output/results.json",
+    "pretty": "cucumber-js --tags=@e2c e2e -f json:e2e/output/results.json -f ./node_modules/cucumber-pretty",
+    "tests": "cucumber-js --tags=@e2c e2e -f json:e2e/output/results.json",
     "report:html": "node e2e/config/report.js",
     "test": "mocha ./tests/examples.test.js"
   },
