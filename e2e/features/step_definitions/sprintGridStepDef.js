@@ -162,6 +162,54 @@ Then('The existing status {string} on cell is not changed', async function (str)
   return await this.verifyCellRandomStatus(str)
 })
 
+When('I hover over the {string} row', async function (str) {
+
+  return await this.hoverTask(str)
+
+})
+
+Then('I see remove row button', async function () {
+
+  return await this.verifyRemoveRowBtnVisible()
+
+})
+
+When('I click on remove task row button', async function () {
+
+  return await this.removeTaskRow()
+
+})
+
+Then('The task row with name {string} is deleted', async function (str) {
+
+  return await this.verifyDeletedTaskRow(str)
+
+})
+
+When('I hover over the date column {string}', async function (str) {
+
+  return await this.hoverDate(str)
+
+})
+
+Then('I see remove column button', async function () {
+
+  return await this.verifyRemoveColumnBtnVisible()
+
+})
+
+When('I click on remove date column button', async function () {
+
+  return await this.removeDateColumn()
+
+})
+
+Then('The date column with date {string} is deleted', async function (str) {
+
+  return await this.verifyDeletedDateColumn(str)
+
+})
+
 
 
 

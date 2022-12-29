@@ -254,6 +254,38 @@ async verifyCellRandomStatus(str) {
   expect(statusExist).to.equal(str)
 }
 
+async hoverTask(str) {
+
+}
+
+async verifyRemoveRowBtnVisible() {
+
+}
+
+async removeTaskRow() {
+
+}
+
+async verifyDeletedTaskRow(str) {
+
+}
+
+async hoverDate(str) {
+
+}
+
+async verifyRemoveColumnBtnVisible() {
+
+}
+
+async removeDateColumn() {
+
+}
+
+async verifyDeletedDateColumn(str) {
+  
+}
+
 }
 
 setWorldConstructor(SprintGrid)
