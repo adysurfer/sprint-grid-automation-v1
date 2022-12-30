@@ -38,7 +38,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 cucumber html report will be generated in `output/report` folder
 
 ## Folder Structure
-
+```
 .
 └── e2e
     ├── config
@@ -53,7 +53,7 @@ cucumber html report will be generated in `output/report` folder
     ├── output
     │   ├── report
    
-
+```
 
 
 
