@@ -78,7 +78,7 @@ Feature: Tasks organization
         Then Cell has '<status>' status now
 	When I click on a cell with status as '<status>'
         When I enter "randomstatus" text in the cell input field
-        Then The existing status '<status>' on cell is not changed
+        Then The status on cell is not changed to "randomstatus"
 		
 	Examples:
             |status     |

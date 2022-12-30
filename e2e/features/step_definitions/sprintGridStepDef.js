@@ -160,7 +160,7 @@ When('I enter {string} text in the cell input field', async function (str) {
   return await this.enterCellInput(str)
 })
 
-Then('The existing status {string} on cell is not changed', async function (str) {
+Then('The status on cell is not changed to {string}', async function (str) {
   return await this.verifyCellRandomStatus(str)
 })
 

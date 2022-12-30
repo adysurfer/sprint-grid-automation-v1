@@ -246,7 +246,7 @@ class SprintGrid {
   async verifyCellRandomStatus(str) {
     await wait(1000)
     const validation = await this.page.$("mat-panel-title span")
-    expect(await validation.evaluate(el => el.innerText.trim())).to.equal(str)
+    expect(await validation.evaluate(el => el.innerText.trim())).to.not.equal(str)
   }
 
   async hoverTask(str) {
