@@ -4,11 +4,13 @@ Before(async function () {
   return await this.openBrowser()
 })
 
-
+After(async function () {
+  return await this.closeBrowser()
+})
 
 //Background
-Given('I open sprint-grid web application page', async function () {
-  return await this.visit()
+Given('I open sprint-grid web application page with page title as {string}', async function (msg) {
+  return await this.visit(msg)
 })
 
 When('I click on add task plus \+ button', async function () {

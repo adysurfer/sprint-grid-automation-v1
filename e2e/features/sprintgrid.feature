@@ -3,7 +3,7 @@ Feature: Tasks organization
     I want to be able to create, remove tasks and dates, and change status of tasks.
 
     Background:
-        Given I open sprint-grid web application page
+        Given I open sprint-grid web application page with page title as 'SprintGridApp'
 
     @e2e
     Scenario: Create a task row
@@ -34,12 +34,22 @@ Feature: Tasks organization
         Then I see a validation message for date input field as 'Date is required'
         Then I see validation message text color for date input field as 'rgb(244, 67, 54)'
         Then I see the Add button for adding date is disabled
-        Then I enter date and verify validation msg for incorrect date formats as 'Follow the format dd.mm.yyyy, please'
+        Then I enter date and verify validation msg for incorrect date formats as 'Follow the format mm/dd/yyyy'
 		| incorrect dates format |
-		| 16-45-2023             |
-		| 12/32/2022             |
-		| 13/12/2022             |
+		| 12-31-2022             |
+		| 12.31.2022             |
+        | 12/31/202              |
+		| 12/31/20               |
+        | 12/31/2                |
+		| 12/31                  |
+        | 12                     |
+        | -1                     |
+        | 31/12/2022             |
+		| 32/12/2022             |
+        | 12/32/2022             |
+        | 13/32/2022             |
 		
+		Then I see the Add button for adding date is disabled
         When I enter date as '12/12/2022'
         When I click on Add button for date column
         Then I am able to create a new date column as 'Dec 12, 2022'
@@ -76,11 +86,9 @@ Feature: Tasks organization
             |In Progress|
             |In Testing |
             |Blocked    | 
-            |Done       |
-
-        
+            |Done       |    
     
-    @e2c
+    @e2e
     Scenario Outline: Remove task row and date (column)
         When I hover over the '<task>' row
         Then I see remove row button
@@ -94,3 +102,4 @@ Feature: Tasks organization
 		Examples:
 			| task    | date        |
 			| Task 1  | Jun 1, 2020 |
+            | Task 2  | May 2, 2020 |
