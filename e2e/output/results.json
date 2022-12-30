@@ -1,0 +1,1971 @@
+[
+  {
+    "description": "    As a user\n    I want to be able to create, remove tasks and dates, and change status of tasks.",
+    "keyword": "Feature",
+    "name": "Tasks organization",
+    "line": 1,
+    "id": "tasks-organization",
+    "tags": [],
+    "uri": "e2e/features/sprintgrid.feature",
+    "elements": [
+      {
+        "id": "tasks-organization;create-a-task-row",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Create a task row",
+        "tags": [
+          {
+            "name": "@e2e",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2343000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open sprint-grid web application page with page title as 'SprintGridApp'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 714000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I click on add task plus + button",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 480000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I fill task name as 'Unique Task'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 137000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click on Add button for task input",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 549000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I am able to add a new task row as 'Unique Task'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 309000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I clear the text in Add task input field",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I see the task input placeholder value as 'Fill the task title, please'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I see validation message for task input field as 'The title is required'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:41"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 512000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -The title is requined\n    +The title is required\n\n    at SprintGrid.verifyTaskValidationMsg (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/e2e.js:59:34)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async SprintGrid.<anonymous> (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/sprintGridStepDef.js:42:10)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I see validation message text color for task input field as 'rgb(244, 67, 54)'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:45"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I see the Add button for adding task is disabled",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:49"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I fill task name as 'Unique Task'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:20"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I see validation for task input field as 'The task with such name already exists'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:53"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I see the Add button for adding task is disabled",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:49"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I click on close task button X",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:57"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "The add task input field is collapsed",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:61"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 109000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "tasks-organization;create-a-date-(column)",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Create a Date (column)",
+        "tags": [
+          {
+            "name": "@e2e",
+            "line": 25
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1359000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open sprint-grid web application page with page title as 'SprintGridApp'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 730000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I click on Add date column + button",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 102000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I click on the datepicker icon",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "I select the date from datepicker",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 242000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "I click on Add button for date column",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 611000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "I am able to create a new date column as 'Dec 25, 2030'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 518000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I clear the date from date input field",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "I see the date input placeholder value as 'Fill the date, please'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "I see a validation message for date input field as 'Date is required'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1011000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 35,
+            "name": "I see validation message text color for date input field as 'rgb(244, 67, 54)'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:97"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "I see the Add button for adding date is disabled",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 511000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "incorrect dates format"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "12-31-2022"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "12.31.2022"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "12/31/202"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "12/31/20"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "12/31/2"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "12/31"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "12"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "-1"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "31/12/2022"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "32/12/2022"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "12/32/2022"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "13/32/2022"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "I enter date and verify validation msg for incorrect date formats as 'Follow the format mm/dd/yyyy'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:105"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1023000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -false\n    +true\n\n    at SprintGrid.verifyDateValidationMsg2 (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/e2e.js:160:28)\n    at async SprintGrid.<anonymous> (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/sprintGridStepDef.js:106:10)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "I see the Add button for adding date is disabled",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:101"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 53,
+            "name": "I enter date as '12/12/2022'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:109"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 54,
+            "name": "I click on Add button for date column",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:77"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 55,
+            "name": "I am able to create a new date column as 'Dec 12, 2022'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:81"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 56,
+            "name": "I clear the date from date input field",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:85"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 57,
+            "name": "I enter date as '12/12/2022'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:109"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 58,
+            "name": "I see a validation for date input field as 'This date already exists'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:113"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 59,
+            "name": "I see the Add button for adding date is disabled",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:101"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 60,
+            "name": "I click on close date column button X",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:117"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 61,
+            "name": "The date column input field is collapsed",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:121"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 231000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "tasks-organization;assign-statuses",
+        "keyword": "Scenario",
+        "line": 85,
+        "name": "Assign statuses",
+        "tags": [
+          {
+            "name": "@e2e",
+            "line": 63
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1401000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open sprint-grid web application page with page title as 'SprintGridApp'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 797000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 65,
+            "name": "I click on an empty cell",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 519000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 66,
+            "name": "The placeholder text for input field is 'Set Status'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:131"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 509000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -Create status\n    +Set Status\n\n    at SprintGrid.verifyPlaceholderText (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/e2e.js:199:27)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async SprintGrid.<anonymous> (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/sprintGridStepDef.js:132:10)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 67,
+            "name": "I click on an input field",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:135"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "statuses"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "To Do"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "In Progress"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "In Testing"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Blocked"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Done"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 68,
+            "name": "I see statuses list as",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:139"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 76,
+            "name": "I select 'To Do' status",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:143"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 77,
+            "name": "The cell collapse",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:147"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 78,
+            "name": "Cell has 'To Do' status now",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:151"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 79,
+            "name": "I click on a cell with status as 'To Do'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:155"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 80,
+            "name": "I enter \"randomstatus\" text in the cell input field",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:159"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 81,
+            "name": "The existing status 'To Do' on cell is not changed",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:163"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 88000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "tasks-organization;assign-statuses",
+        "keyword": "Scenario",
+        "line": 86,
+        "name": "Assign statuses",
+        "tags": [
+          {
+            "name": "@e2e",
+            "line": 63
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1337000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open sprint-grid web application page with page title as 'SprintGridApp'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 809000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 65,
+            "name": "I click on an empty cell",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 533000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 66,
+            "name": "The placeholder text for input field is 'Set Status'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:131"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 512000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -Create status\n    +Set Status\n\n    at SprintGrid.verifyPlaceholderText (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/e2e.js:199:27)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async SprintGrid.<anonymous> (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/sprintGridStepDef.js:132:10)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 67,
+            "name": "I click on an input field",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:135"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "statuses"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "To Do"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "In Progress"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "In Testing"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Blocked"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Done"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 68,
+            "name": "I see statuses list as",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:139"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 76,
+            "name": "I select 'In Progress' status",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:143"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 77,
+            "name": "The cell collapse",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:147"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 78,
+            "name": "Cell has 'In Progress' status now",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:151"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 79,
+            "name": "I click on a cell with status as 'In Progress'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:155"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 80,
+            "name": "I enter \"randomstatus\" text in the cell input field",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:159"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 81,
+            "name": "The existing status 'In Progress' on cell is not changed",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:163"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "tasks-organization;assign-statuses",
+        "keyword": "Scenario",
+        "line": 87,
+        "name": "Assign statuses",
+        "tags": [
+          {
+            "name": "@e2e",
+            "line": 63
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1406000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open sprint-grid web application page with page title as 'SprintGridApp'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 730000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 65,
+            "name": "I click on an empty cell",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 528000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 66,
+            "name": "The placeholder text for input field is 'Set Status'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:131"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 513000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -Create status\n    +Set Status\n\n    at SprintGrid.verifyPlaceholderText (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/e2e.js:199:27)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async SprintGrid.<anonymous> (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/sprintGridStepDef.js:132:10)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 67,
+            "name": "I click on an input field",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:135"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "statuses"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "To Do"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "In Progress"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "In Testing"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Blocked"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Done"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 68,
+            "name": "I see statuses list as",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:139"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 76,
+            "name": "I select 'In Testing' status",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:143"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 77,
+            "name": "The cell collapse",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:147"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 78,
+            "name": "Cell has 'In Testing' status now",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:151"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 79,
+            "name": "I click on a cell with status as 'In Testing'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:155"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 80,
+            "name": "I enter \"randomstatus\" text in the cell input field",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:159"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 81,
+            "name": "The existing status 'In Testing' on cell is not changed",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:163"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 101000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "tasks-organization;assign-statuses",
+        "keyword": "Scenario",
+        "line": 88,
+        "name": "Assign statuses",
+        "tags": [
+          {
+            "name": "@e2e",
+            "line": 63
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1301000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open sprint-grid web application page with page title as 'SprintGridApp'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 817000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 65,
+            "name": "I click on an empty cell",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 533000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 66,
+            "name": "The placeholder text for input field is 'Set Status'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:131"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 513000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -Create status\n    +Set Status\n\n    at SprintGrid.verifyPlaceholderText (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/e2e.js:199:27)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async SprintGrid.<anonymous> (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/sprintGridStepDef.js:132:10)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 67,
+            "name": "I click on an input field",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:135"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "statuses"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "To Do"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "In Progress"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "In Testing"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Blocked"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Done"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 68,
+            "name": "I see statuses list as",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:139"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 76,
+            "name": "I select 'Blocked' status",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:143"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 77,
+            "name": "The cell collapse",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:147"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 78,
+            "name": "Cell has 'Blocked' status now",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:151"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 79,
+            "name": "I click on a cell with status as 'Blocked'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:155"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 80,
+            "name": "I enter \"randomstatus\" text in the cell input field",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:159"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 81,
+            "name": "The existing status 'Blocked' on cell is not changed",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:163"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 87000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "tasks-organization;assign-statuses",
+        "keyword": "Scenario",
+        "line": 89,
+        "name": "Assign statuses",
+        "tags": [
+          {
+            "name": "@e2e",
+            "line": 63
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1366000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open sprint-grid web application page with page title as 'SprintGridApp'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 771000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 65,
+            "name": "I click on an empty cell",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 532000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 66,
+            "name": "The placeholder text for input field is 'Set Status'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:131"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 515000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -Create status\n    +Set Status\n\n    at SprintGrid.verifyPlaceholderText (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/e2e.js:199:27)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async SprintGrid.<anonymous> (/Users/aditya/Desktop/testv1/sprint-grid-automation-v1/e2e/features/step_definitions/sprintGridStepDef.js:132:10)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 67,
+            "name": "I click on an input field",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:135"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "statuses"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "To Do"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "In Progress"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "In Testing"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Blocked"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Done"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 68,
+            "name": "I see statuses list as",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:139"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 76,
+            "name": "I select 'Done' status",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:143"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 77,
+            "name": "The cell collapse",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:147"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 78,
+            "name": "Cell has 'Done' status now",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:151"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 79,
+            "name": "I click on a cell with status as 'Done'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:155"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 80,
+            "name": "I enter \"randomstatus\" text in the cell input field",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:159"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 81,
+            "name": "The existing status 'Done' on cell is not changed",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:163"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 95000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "tasks-organization;remove-task-row-and-date-(column)",
+        "keyword": "Scenario",
+        "line": 104,
+        "name": "Remove task row and date (column)",
+        "tags": [
+          {
+            "name": "@e2e",
+            "line": 91
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1351000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open sprint-grid web application page with page title as 'SprintGridApp'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 802000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 93,
+            "name": "I hover over the 'Task 1' row",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:167"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 94,
+            "name": "I see remove row button",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:173"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 95,
+            "name": "I click on remove task row button",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 96,
+            "name": "The task row with name 'Task 1' is deleted",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:185"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 503000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 97,
+            "name": "I hover over the date column 'Jun 1, 2020'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:191"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 98,
+            "name": "I see remove column button",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 99,
+            "name": "I click on remove date column button",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:203"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 100,
+            "name": "The date column with date 'Jun 1, 2020' is deleted",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:209"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 503000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "tasks-organization;remove-task-row-and-date-(column)",
+        "keyword": "Scenario",
+        "line": 105,
+        "name": "Remove task row and date (column)",
+        "tags": [
+          {
+            "name": "@e2e",
+            "line": 91
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1400000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open sprint-grid web application page with page title as 'SprintGridApp'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 757000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 93,
+            "name": "I hover over the 'Task 2' row",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:167"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 94,
+            "name": "I see remove row button",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:173"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 95,
+            "name": "I click on remove task row button",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 96,
+            "name": "The task row with name 'Task 2' is deleted",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:185"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 502000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 97,
+            "name": "I hover over the date column 'May 2, 2020'",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:191"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 98,
+            "name": "I see remove column button",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:197"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 99,
+            "name": "I click on remove date column button",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:203"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 100,
+            "name": "The date column with date 'May 2, 2020' is deleted",
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:209"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 503000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "e2e/features/step_definitions/sprintGridStepDef.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 85000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
