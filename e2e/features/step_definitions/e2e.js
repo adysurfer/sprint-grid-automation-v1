@@ -6,7 +6,7 @@ const { click, hover, wait } = require('../support/helpers')
 class SprintGrid {
 
   async openBrowser() {
-    this.browser = await puppeteer.launch({ headless: false, ignoreHTTPSErrors: true })
+    this.browser = await puppeteer.launch({ headless: true, ignoreHTTPSErrors: true })
     this.page = await this.browser.newPage()
     await this.page.getDefaultTimeout(10000)
     await this.page.setDefaultNavigationTimeout(20000)
