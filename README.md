@@ -1,4 +1,4 @@
-# Sprint Grid Ver. 1
+# Sprint Grid Ver. 1 [![Tests](https://github.com/adysurfer/sprint-grid-automation-v1/actions/workflows/tests.yml/badge.svg)](https://github.com/adysurfer/sprint-grid-automation-v1/actions/workflows/tests.yml)
 
 Sprint Grid is an organizer of tasks and planning them by date.
 You can add or remove tasks and dates, change status of the task.
